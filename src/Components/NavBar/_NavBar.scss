@@ -1,0 +1,35 @@
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 1920px;
+    .logo-namePag{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: ' ', monospace;
+        margin: 2rem;
+        .imgLogo{
+            width: 6vw;
+            height: auto;
+        }
+    }
+    .navHead{
+        font-family: 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        margin: 2rem;
+        text-decoration: none;
+        list-style: none;
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

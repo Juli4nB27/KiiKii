@@ -1,0 +1,31 @@
+.divContMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    margin-top: 4rem;
+    
+    .imgMain-Derecha{
+        width: auto;
+        height: 430px;
+        box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -webkit-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -moz-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+    }
+    .imgMain-Medio{
+        width: auto;
+        height: 600px;
+        box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -webkit-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -moz-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+    }
+    .imgMain-Izquierda{
+        width: auto;
+        height: 300px;
+        box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -webkit-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+        -moz-box-shadow: 17px 14px 5px 0px rgba(0,0,0,0.24);
+    }
+
+}
