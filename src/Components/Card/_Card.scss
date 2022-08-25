@@ -1,0 +1,17 @@
+.contenedorCard{
+    .imagenCard{
+        width: 350px;
+    }
+    .tituloCard{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 2rem;
+        font-family: 'Niveau Grotesk', monospace ;
+    }
+    .precioCard{
+        display: flex;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace ;
+    }
+}

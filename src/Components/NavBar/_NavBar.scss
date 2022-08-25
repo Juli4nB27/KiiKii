@@ -1,10 +1,16 @@
 
 .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content:space-between;
+    height: 140px;
     width: 100%;
     max-width: 1920px;
+    background-color: white;
     .logo-namePag{
         display: flex;
         align-items: center;
@@ -13,7 +19,7 @@
         font-family: ' ', monospace;
         margin: 2rem;
         .imgLogo{
-            width: 6vw;
+            width: 5vw;
             height: auto;
         }
     }
@@ -24,6 +30,7 @@
         justify-content: flex-end;
         gap: 2rem;
         margin: 2rem;
+        font-size: 1.5rem;
         text-decoration: none;
         list-style: none;
         a{
