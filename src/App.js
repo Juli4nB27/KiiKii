@@ -6,7 +6,7 @@ import './App.scss';
 
 import NavBar from './Components/NavBar/NavBar';
 
-import MainPage from './Components/MainPages/MainPage';
+import ItemListConteiner from './Components/ItemListConteiner/ItemListConteiner';
 
 import Cards from './Components/Cards/Cards';
 
@@ -17,7 +17,7 @@ function App() {
           <NavBar />
         </header>
         <main className='App-main'>
-          < MainPage />
+          < ItemListConteiner />
           < Cards/>
         </main>
 
