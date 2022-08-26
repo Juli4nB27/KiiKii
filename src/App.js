@@ -3,7 +3,6 @@ import React from 'react'
 
 import './App.scss';
 
-
 import NavBar from './Components/NavBar/NavBar';
 
 import ItemListConteiner from './Components/ItemListConteiner/ItemListConteiner';

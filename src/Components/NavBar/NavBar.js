@@ -1,6 +1,6 @@
 import gatoDeLaSuerte from "./assets/gatoDeLaSuerte.png";
 
-import CarritoNavBar from "../cartWidget/carritoNav";
+import CarritoNavBar from "../CartWidget/carritoNav";
 import { useState } from "react";
 
 const NavBar = () => {

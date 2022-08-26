@@ -1,24 +1,12 @@
+import Carrusel from "../Carrusel/Carrusel"
 
-import imgMedio from './assets/mdMainPag.jpg';
-
-import imgIzquierda from './assets/izqMainPag.jpg';
-
-import imgDerecha from './assets/drchMainPag.jpg';
-
-
-
-
-
-const MainPage = () => {
+const ItemListConteiner = () => {
     return (
         <div className='divContMain'>
-            <img className='imgMain-Derecha' src= {imgDerecha} />
-            <img className='imgMain-Medio' src= {imgMedio} />
-            <img className='imgMain-Izquierda' src= {imgIzquierda} />
-            
+            < Carrusel/>
         </div>
         
     )
 }
 
-export default MainPage
+export default ItemListConteiner
