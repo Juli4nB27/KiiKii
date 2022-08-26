@@ -14,26 +14,22 @@ const Carrusel = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/Fs4SwDSv/Mesa-de-trabajo-1-Tercera4.png"
-          alt="First slide"
+          src="https://i.postimg.cc/mDbJwxbp/Mesa-de-trabajo-1-Fondo1.png"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/yYsJLWqY/Mesa-de-trabajo-1-Tercera3.png"
-          alt="Second slide"
+          src="https://i.postimg.cc/qv3L6mdt/Mesa-de-trabajo-1-Fondo3.png"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/25b31ZWT/Mesa-de-trabajo-1.png"
-          alt="Third slide"
+          src="https://i.postimg.cc/wv6cPgRJ/Mesa-de-trabajo-1-Fondo2.png"
         />
       </Carousel.Item>
     </Carousel>
   );
 };
-
 export default Carrusel;
