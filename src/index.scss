@@ -17,8 +17,8 @@
 @import "bootstrap/scss/bootstrap";
 
 //Import de la cards
-@import './Components/Cards/Cards';
-@import './Components/Card/Card';
+@import './Components/ItemList/ItemList';
+@import './Components/Item/Item';
 
 //Import Contador y botones
 @import './Components/ItemCount/ItemCount';

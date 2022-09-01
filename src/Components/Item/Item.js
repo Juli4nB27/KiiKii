@@ -3,7 +3,7 @@
 
 import ItemCount from "../ItemCount/ItemCount";
 
-const Card = ({imagen, titulo, precio, stock}) => {
+const Item = ({imagen, titulo, precio, stock}) => {
 
     const OnAdd = (valor) => {
         console.log(`Agregaste ${valor} ${titulo} al carrito`)
@@ -19,4 +19,4 @@ const Card = ({imagen, titulo, precio, stock}) => {
     );
 }
 
-export default Card;
+export default Item;

@@ -7,7 +7,7 @@ import NavBar from './Components/NavBar/NavBar';
 
 import ItemListConteiner from './Components/ItemListConteiner/ItemListConteiner';
 
-import Cards from './Components/Cards/Cards';
+import ItemList from './Components/ItemList/ItemList';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         </header>
         <main className='App-main'>
           < ItemListConteiner />
-          < Cards/>
+          < ItemList/>
         </main>
 
         
