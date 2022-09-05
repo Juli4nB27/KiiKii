@@ -1,5 +1,6 @@
 import gatoDeLaSuerte from "./assets/gatoDeLaSuerte.png";
 
+
 import CarritoNavBar from "../CartWidget/carritoNav";
 import { useState } from "react";
 

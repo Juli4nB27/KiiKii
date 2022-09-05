@@ -17,7 +17,7 @@ function App() {
         </header>
         <main className='App-main'>
           < ItemListConteiner />
-          < ItemList/>
+          
         </main>
 
         
