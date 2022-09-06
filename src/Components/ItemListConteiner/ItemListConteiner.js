@@ -1,6 +1,7 @@
+/*
 import Carrusel from "../Carrusel/Carrusel"
 
-import React from 'react'
+import React from 'react';
 
 import ItemList from "../ItemList/ItemList";
 
@@ -20,3 +21,4 @@ const ItemListConteiner = () => {
 }
 
 export default ItemListConteiner
+*/

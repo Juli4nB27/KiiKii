@@ -3,7 +3,13 @@
 
 @import './Components/NavBar/NavBar';
 
+//Import itemListConteiner
 @import './Components/ItemListConteiner/ItemListConteiner';
+
+//Import itemDetailConteiner
+@import './Components/ItemDetailContainer/ItemDetailContainer';
+
+
 
 @import './styles/resets';
 
@@ -19,6 +25,10 @@
 //Import de la cards
 @import './Components/ItemList/ItemList';
 @import './Components/Item/Item';
+
+//Import de la card detail
+@import './Components/ItemDetail/ItemDetail';
+
 
 //Import Contador y botones
 @import './Components/ItemCount/ItemCount';

@@ -1,12 +1,10 @@
-
+/*
 import React from 'react'
 import Item from '../Item/Item';
 import Carta from '../libs/Carta';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Task from '../utils/Task';
-
-
 
 
 const ItemList = () => {
@@ -31,8 +29,9 @@ const ItemList = () => {
         </div>
     );
 }
-
-
-
-
 export default ItemList;
+
+*/
+
+
+

@@ -24,7 +24,8 @@ const Carta = [
         id:3,
         title:'Hoodie "Live Like Life"',
         image: image3,
-        precio: '$12.999'
+        precio: '$12.999',
+        desc:'Hoodie hecho 100% de algodon con estampas de alta calidad.'
     },
     {
         id:4,
