@@ -1,39 +1,41 @@
 import gatoDeLaSuerte from "./assets/gatoDeLaSuerte.png";
 
-
 import CarritoNavBar from "../CartWidget/carritoNav";
-import { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-
   return (
-    <nav className='nav'>
-      <div className="logo-namePag">
-        <img className="imgLogo" src={gatoDeLaSuerte} />
-        <h1 className="namPag">KIIKII</h1>
-      </div>
-      <div>
-
-      </div>
-
-      <ul className="navHead">
-        <a href="" className="navHeadNew">
-          <li>new</li>
-        </a>
-        <a href="" className="navHeadHoodies">
-          <li>productos</li>
-        </a>
-        <a href="" className="navHeadRemeras">
-          <li>informacion</li>
-        </a>
-        <a href="" className="navHeadPantalones">
-          <li>contacto</li>
-        </a>
-        <a href="">
+    <header className="App-header">
+      <nav className="nav">
+        <div className="logo-namePag">
+          <Link to="/" className="navHeadNew">
+            <img alt="" className="imgLogo" src={gatoDeLaSuerte} />
+          </Link>
+          <Link to="/"className="namPag" >
+            <h1 className="namPag">KIIKII</h1>
+          </Link>
+        </div>
+        <ul className="navHead">
+          <Link to="/" className="navHeadNew">
+            <li>new</li>
+          </Link>
+          <Link to="/category/1" className="navHeadNew">
+            <li>hoodies</li>
+          </Link>
+          <Link to="/category/2" className="navHeadNew">
+            <li>remeras</li>
+          </Link>
+          <Link to="/category/4" className="navHeadRemeras">
+            <li>informacion</li>
+          </Link>
+          <Link to="/category/5" className="navHeadPantalones">
+            <li>contacto</li>
+          </Link>
           <CarritoNavBar />
-        </a>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

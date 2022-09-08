@@ -1,20 +1,21 @@
 
 
 
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
-const Item = ({imagen, titulo, precio, stock}) => {
+const Item = ({item}) => {
 
     const OnAdd = (valor) => {
-        console.log(`Agregaste ${valor} ${titulo} al carrito`)
+        console.log(`Agregaste ${valor} ${item.title} al carrito`)
     }
 
     return(
-        <div className="contenedorCard">
-            <img src={imagen} className="imagenCard"/>
-            <h2 className="tituloCard">{titulo}</h2>
-            <p className="precioCard">{precio}</p>
-            < ItemCount inicio={0} stock={stock} onAdd={OnAdd}/>
+        <div key={item.id} className="contenedorCard">
+            <img alt="" src={item.image} className="imagenCard"/>
+            <h2 className="tituloCard">{item.title}</h2>
+            <p className="precioCard">{item.precio}</p>
+            <Link className="btnDetalle" to={`/item/${item.id}`}><button className="BtnDetalle">Detalle</button></Link>
         </div>
     );
 }

@@ -6,7 +6,7 @@ let Task = (consult) =>{
         if (run){
             setTimeout(() =>{
                 resolve(consult)
-            }, 2000);
+            }, 1000);
         } else{
             reject("error!!")
         }
