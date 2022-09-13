@@ -1,11 +1,9 @@
 
 
-import image1 from './assets/image10.png';
 import image2 from './assets/image11.png';
 import image3 from './assets/image12.png';
 import image4 from './assets/image13.png';
 import image5 from './assets/image14.png';
-import image6 from './assets/image15.png';
 
 import image7 from './assets/image16.jpeg';
 import image8 from './assets/image17.jpeg';
@@ -45,14 +43,6 @@ const Carta = [
         categoryId: 1,
         precio: '$13.999',
         desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color negro.'
-    },
-    {
-        id:5,
-        title:'Hoodie "Photo"',
-        image: image6,
-        categoryId: 1,
-        precio: '$9.999',
-        desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color rosa.'
     },
     {
         id:6,
