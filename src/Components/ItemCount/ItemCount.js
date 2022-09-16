@@ -1,10 +1,11 @@
 
 
 import React,{useState} from "react";
+import Item from "../Item/Item";
 
 
 
-const ItemCount = ({inicio, stock, OnAdd}) => {
+const ItemCount = ({item, inicio, addItem}) => {
     const [count, setCount] = useState(inicio)
 
     const SumarContador = () => {
@@ -21,10 +22,16 @@ const ItemCount = ({inicio, stock, OnAdd}) => {
                 <span>{count}</span>
                 <button className="btnMas" onClick={SumarContador} disabled={count >= 6}>+</button>
             </div>
-            <div className="divAgregarCarrito" onClick={() => OnAdd()}>
-                <button className="btnAgregarCarrito">Agregar al carrito</button>
-            </div>
-            
+            {   
+                count > 0 ?
+                <div className="divAgregarCarrito" onClick={() => addItem(item, count)}>
+                    <button className="btnAgregarCarrito">Agregar al carrito</button>
+                </div>
+                :
+                <div className="divAgregarCarrito">
+                    <button className="btnAgregarCarrito">Agregar al carrito</button>
+                </div>
+            }
         </div>
     )
 }

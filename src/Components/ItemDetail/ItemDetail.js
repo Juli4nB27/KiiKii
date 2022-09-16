@@ -1,16 +1,16 @@
 
-import { useState } from "react";
+import Context from "@mui/base/TabsUnstyled/TabsContext";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 
 const ItemDetail = ({item}) => {
 
     const [add, setAdd] = useState(false);
-    const OnAdd = () => {
-        setAdd(!add)
-    }
-
+    
+    const { addItem } = useContext(CartContext)
     return(
         <div className="contenedorCardDetail">
             <img src={item.image} className="imagenCardDetail"/>
@@ -25,7 +25,8 @@ const ItemDetail = ({item}) => {
                         <button className="btnFinalizarCompra">Finalizar Compra</button>
                     </Link>
                     : 
-                    <ItemCount inicio={0} stock={item.stock} OnAdd={OnAdd}/>     
+                    <ItemCount item={item} inicio={0} stock={item.stock} addItem={addItem} />     
+                    
             }
 
             </div>

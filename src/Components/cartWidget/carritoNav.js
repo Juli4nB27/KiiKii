@@ -1,11 +1,24 @@
 
 
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import carritoCompra from './assets/bolso.png';
 
 function CarritoNavBar() {
+    const { items } = useContext(CartContext)
+    let itemsInCart = 0;
+
+    items.map((item) => {
+      itemsInCart = itemsInCart + item.count;
+    })
+
     return (
       <div className="App">
-        <img className='carrito' src={carritoCompra} />
+        <div className='itemsInCart' >
+          <img className='carrito' src={carritoCompra} />
+          {itemsInCart}
+        </div>
+        
       </div>
     );
   }

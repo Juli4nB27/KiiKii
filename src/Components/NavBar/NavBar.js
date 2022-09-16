@@ -32,7 +32,9 @@ const NavBar = () => {
           <Link to="/category/5" className="navHeadPantalones">
             <li>contacto</li>
           </Link>
-          <CarritoNavBar />
+          <Link to="/cart">
+            <CarritoNavBar />
+          </Link>
         </ul>
       </nav>
     </header>
