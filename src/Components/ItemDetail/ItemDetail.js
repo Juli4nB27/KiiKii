@@ -8,8 +8,23 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({item}) => {
 
-    const [add, setAdd] = useState(false);
-    
+    const [count, setCount] = useState(0)
+
+    const SumarContador = () => {
+        setCount(count + 1)
+    }
+    const RestarContador = () => {
+        setCount(count - 1 )
+    }
+
+
+    let [add, setAdd] = useState(0)
+    const onAdd = () => {
+        add = add + count
+        add === 1 ? console.log(`Se agrego ${add} objeto al carrito`) : console.log(`Se agregaron ${add} objetos al carrito`)
+        setAdd(add)
+        addItem(item, count)
+    }
     const { addItem } = useContext(CartContext)
     return(
         <div className="contenedorCardDetail">
@@ -19,13 +34,13 @@ const ItemDetail = ({item}) => {
             <p className="precioDescDetail">{item.desc}</p>
             <div>
             {
-                add ? 
+                add > 1 ?
                     <Link to="/cart" className="divFinalizarCompra">
                         <div className="msjOnAdd">Producto añadido!</div>
                         <button className="btnFinalizarCompra">Finalizar Compra</button>
                     </Link>
                     : 
-                    <ItemCount item={item} inicio={0} stock={item.stock} addItem={addItem} />     
+                <ItemCount onAdd={onAdd} RestarContador={RestarContador} SumarContador={SumarContador} count={count} item={item} inicio={0} stock={item.stock} addItem={addItem} />     
                     
             }
 

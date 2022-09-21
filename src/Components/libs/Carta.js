@@ -16,7 +16,7 @@ const Carta = [
         id:1,
         title:'Hoodie "Hello"',
         image: image2,
-        precio: '$12.999',
+        precio: 12999,
         categoryId: 1,
         desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color negro.'
     },
@@ -24,7 +24,7 @@ const Carta = [
         id:2,
         title:'Hoodie "Live Like Life"',
         image: image3,
-        precio: '$12.999',
+        precio: 12999,
         categoryId: 1,
         desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color negro.'
     },
@@ -33,7 +33,7 @@ const Carta = [
         title:'Hoodie "Good Vibes Only"',
         image: image4,
         categoryId: 1,
-        precio: '$9.999',
+        precio: 12999,
         desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color negro.'
     },
     {
@@ -41,7 +41,7 @@ const Carta = [
         title:'Hoodie "Sha Da Fa Cup"',
         image: image5,
         categoryId: 1,
-        precio: '$13.999',
+        precio: 13999,
         desc:'Hoodie hecho 100% de algodon con estampas de alta calidad color negro.'
     },
     {
@@ -49,7 +49,7 @@ const Carta = [
         title:'Life "Gamer"',
         image: image7,
         categoryId: 2,
-        precio: '$4.999',
+        precio: 4999,
         desc:'Remera hecha 100% de algodon con estampas de alta calidad color azul'
     },
     {
@@ -57,7 +57,7 @@ const Carta = [
         title:'Surfing California',
         image: image8,
         categoryId: 2,
-        precio: '$3.500',
+        precio: 3500,
         desc:'Remera hecha 100% de algodon con estampas de alta calidad color celeste'
     },
     {
@@ -65,7 +65,7 @@ const Carta = [
         title:'USA',
         image: image9,
         categoryId: 2,
-        precio: '$5.999',
+        precio: 5999,
         desc:'Remera hecha 100% de algodon con estampas de alta calidad color blanca'
     },
     {
@@ -73,7 +73,7 @@ const Carta = [
         title:'Devoted',
         image: image10,
         categoryId: 2,
-        precio: '$3.999',
+        precio: 3999,
         desc:'Remera hecha 100% de algodon con estampas de alta calidad color negra'
     }
 ]
