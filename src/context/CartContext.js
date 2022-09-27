@@ -20,8 +20,6 @@ export const CartProvider = ({ children }) => {
         const totalScores = total.reduce(
             (previusScore, currrentScore,) => previusScore+currrentScore, item.precio *count);
             setTotalS(totalScores)
-            console.log(item.precio)
-            console.log(totalS)
         isInCart(item.id)
             ?
             setItems(items.map((prod) => {
@@ -37,6 +35,7 @@ export const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         setItems(items.filter(item => item.id !== id))
+        
     }
 
 

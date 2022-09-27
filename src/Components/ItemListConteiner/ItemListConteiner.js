@@ -5,24 +5,22 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import { firestoreFetch } from "../utils/firebaseConfig";
 
-import Carta from "../libs/Carta";
-
-import Task from "../utils/Task";
 
 const ItemListConteiner = () => {
   const [products, setProducts] = useState([]);
   const { id } = useParams();
   useEffect(() => {
     if (id) {
-      Task(Carta.filter(item => item.categoryId === parseInt(id)))
-        .then((res) => setProducts(res))
-        .catch((err) => console.log(err));
-    } else {
-      Task(Carta)
-        .then((res) => setProducts(res))
-        .catch((err) => console.log(err));
-    }
+      firestoreFetch()
+          .then(result => setProducts(result.filter(item => item.categoryId === parseInt(id))))
+          .catch(err => console.log(err))
+  } else {
+    firestoreFetch()
+    .then(result => setProducts(result))
+  }
+    
   }, [id]);
   return (
     <main className='App-main'>

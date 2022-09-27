@@ -1,25 +1,28 @@
 
 import React from 'react'
-import Carta from '../libs/Carta';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Task from '../utils/Task';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../utils/firebaseConfig';
 
 
 const ItemDetailConteiner = () =>{ 
-    const [producto, setProducto] = useState([]);
-    const {id} = useParams();
+    const [datos, setDatos] = useState({});
+    const { id } = useParams();
     useEffect(() => {
-        Task(Carta.find(item => item.id === parseInt(id)))
-            .then(res => setProducto(res))
-            .catch(err => console.log(err))
+        const q = doc(db, 'products', id);
+        getDoc(q)
+            .then(res => setDatos({
+                id: res.id,
+                ...res.data()
+            }))
     }, [id])
     return(
         <>{
             <main className='App-main'>
-                <ItemDetail item={producto} />
+                <ItemDetail item={datos} />
             </main>
         }</>
     )
