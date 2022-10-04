@@ -1,16 +1,35 @@
+import { addDoc, collection } from "firebase/firestore";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { db } from "../Components/utils/firebaseConfig";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
   const { items, removeItem, clearItems, totalS} = useContext(CartContext);
-  console.log(items);
+  console.log(items.map(item => ({id:item.id, title:item.title, price:item.price})));
   let itemsInCart = 0;
 
   items.map((item) => {
     itemsInCart = itemsInCart + item.count;
   })
+
+  const orden ={
+    comprador:{
+      nombre:'julian',
+      apellido:'bouchet',
+      telefono:'3442',
+      direccion:'carlos thays'
+    },
+    productos: items.map(item => ({id:item.id, title:item.title, price:item.price}))
+  }
+
+  const terminarCompra =() => {
+    const ordenCompra = collection(db, 'ordenes');
+    addDoc(ordenCompra, orden)
+      .then(({id}) => console.log(id))
+  }
+
+
 
   return (
     <main className="App-main">
@@ -36,6 +55,7 @@ const Cart = () => {
           <h3 className={items.length !== 0 ? 'detalleCant' : 'disable'}>Productos: {itemsInCart}</h3>  
           <p className={items.length !== 0 ? 'precioTotal' : 'disable'}> Total a pagar: ${totalS} </p>
           <button onClick={clearItems} className={items.length !== 0 ? 'btnBorrarTodo' : 'disable'}>Borrar todo</button>
+          <button onClick={terminarCompra} className={items.length !== 0 ? 'btnFinalizarCompra' : 'disable'}>Finalizar Compra</button>
           <Link className="linkVolverProd" to='/' ><button className={items.length === 0 ? 'botonVolverInicio' : 'disable'}>Volver a productos</button></Link>
         </div> 
     </main>

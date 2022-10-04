@@ -89,12 +89,28 @@
             background-color: white;
             border: 1px solid black;
             font-family: 'Niveau Grotesk', monospace ;
+            margin-bottom: 1rem;
         }
         .btnBorrarTodo:hover{
             font-family: 'Niveau Grotesk', monospace ;
             transition: 0.5s;
             border: 1px solid black;
             background-color: rgba(46, 43, 43, 0.753);
+        }
+        .btnFinalizarCompra{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            background-color: white;
+            border: 1px solid black;
+            font-family: 'Niveau Grotesk', monospace ;
+        }
+        .btnFinalizarCompra:hover{
+            font-family: 'Niveau Grotesk', monospace ;
+            transition: 0.5s;
+            border: 1px solid black;
+            background-color: rgba(85, 211, 47, 0.753);
         }
         .disable{
             display: none;
