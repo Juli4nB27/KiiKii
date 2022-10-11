@@ -3,7 +3,7 @@
 import React,{useState} from "react";
 
 
-const ItemCount = ({item, addItem, RestarContador, SumarContador, count, onAdd}) => {
+const ItemCount = ({ RestarContador, SumarContador, count, onAdd}) => {
 
     return(
         <div className="count" >

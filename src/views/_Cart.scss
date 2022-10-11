@@ -1,9 +1,10 @@
 
 
-.App-main{
+.App-mainCart{
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: max-content;
     .divContMainCart{
         width: 100%;
         display: flex;
@@ -77,9 +78,6 @@
         .detalleCant{
             font-size: 30px;
             font-family: 'Niveau Grotesk', monospace ;
-        }
-        .precioTotal{
-                
         }
         .btnBorrarTodo{
             display: flex;

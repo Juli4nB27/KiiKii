@@ -1,5 +1,6 @@
 
 import React, {createContext, useState } from 'react'
+import Cart from '../views/Cart'
 
 
 export const CartContext = createContext ([])
@@ -14,25 +15,22 @@ export const CartProvider = ({ children }) => {
         return found
     }
 
-    const addItem = (item, count) => {
-
-        setTotal([...total, item.precio *count])
-        const totalScores = total.reduce(
-            (previusScore, currrentScore,) => previusScore+currrentScore, item.precio *count);
-            setTotalS(totalScores)
+    const addItem = (item, count, total) => {
+        total = count * item.precio;
         isInCart(item.id)
             ?
             setItems(items.map((prod) => {
                if(prod.id === item.id){
                 prod.count += count
+                prod.total = prod.count * prod.precio;
                }
                 return prod
             }))
             :
-            setItems([...items, {id: item.id, title: item.title , price: item.precio, count: count, image: item.image, desc: item.desc, totalS:item.totalS }])
+            setItems([...items, {id: item.id, title: item.title , price: item.precio, count: count, image: item.image, desc: item.desc, total: total }])
     }
 
-
+ 
     const removeItem = (id) => {
         setItems(items.filter(item => item.id !== id))
         
@@ -44,7 +42,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ items, addItem, removeItem, clearItems, totalS}}>
+        <CartContext.Provider value={{ items, addItem, removeItem, clearItems}}>
             {children}
         </CartContext.Provider>
     )

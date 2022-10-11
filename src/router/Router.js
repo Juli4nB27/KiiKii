@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "../Components/Footer/Footer";
 import ItemDetailConteiner from "../Components/ItemDetailContainer/ItemDetailContainer";
 import ItemListConteiner from "../Components/ItemListConteiner/ItemListConteiner";
 import NavBar from "../Components/NavBar/NavBar";
@@ -18,6 +19,7 @@ const Router = () => {
             <Route path='/category/item/:id' element={<ItemDetailConteiner />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
+          
         </BrowserRouter>
       </CartProvider>  
   );
