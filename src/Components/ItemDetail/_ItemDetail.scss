@@ -6,7 +6,6 @@
     align-items: center;
     margin: 17rem;
     .imagenCardDetail{
-        width: 800px;
         height: 565px;
         padding-bottom: 1rem;
     }
@@ -32,6 +31,8 @@
     .divFinalizarCompra{
         margin-top: 1rem;
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
         .btnFinalizarCompra{
             padding: 0.5rem;
             background-color: white;

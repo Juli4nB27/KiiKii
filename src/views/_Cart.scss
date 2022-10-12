@@ -5,6 +5,7 @@
     flex-direction: row;
     align-items: center;
     height: max-content;
+    height: 100vh;
     .divContMainCart{
         width: 100%;
         display: flex;
@@ -30,7 +31,6 @@
                     flex-direction: column;
                     margin-right: 2rem;
                     .imagenCartDetail{
-                        width: 425px;
                         height: 300px;
                     }    
                 }
@@ -93,7 +93,7 @@
             font-family: 'Niveau Grotesk', monospace ;
             transition: 0.5s;
             border: 1px solid black;
-            background-color: rgba(46, 43, 43, 0.753);
+            background-color: rgba(255, 0, 0, 0.753);
         }
         .btnFinalizarCompra{
             display: flex;

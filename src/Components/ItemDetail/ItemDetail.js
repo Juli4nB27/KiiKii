@@ -36,7 +36,7 @@ const ItemDetail = ({item}) => {
                 add > 0 ?
                     <Link to="/cart" className="divFinalizarCompra">
                         <div className="msjOnAdd">Producto añadido!</div>
-                        <button className="btnFinalizarCompra">Finalizar Compra</button>
+                        <button className="btnFinalizarCompra">Ir al carrito</button>
                     </Link>
                     : 
                 <ItemCount onAdd={onAdd} RestarContador={RestarContador} SumarContador={SumarContador} count={count} item={item} inicio={0} stock={item.stock} addItem={addItem} />     
