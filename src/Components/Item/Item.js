@@ -6,9 +6,6 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({item}) => {
 
-    const OnAdd = (valor) => {
-        console.log(`Agregaste ${valor} ${item.title} al carrito`)
-    }
 
     return(
         <div key={item.id} className="contenedorCard">

@@ -1,14 +1,12 @@
 
 import React, {createContext, useState } from 'react'
-import Cart from '../views/Cart'
+import Cart from '../views/Cart/Cart'
 
 
 export const CartContext = createContext ([])
 
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
-    const [total, setTotal] = useState([])
-    const [totalS, setTotalS] = useState(0)
 
     const isInCart = (id) => {
         const found = items.find(item => item.id === id);
@@ -22,7 +20,7 @@ export const CartProvider = ({ children }) => {
             setItems(items.map((prod) => {
                if(prod.id === item.id){
                 prod.count += count
-                prod.total = prod.count * prod.precio;
+                prod.total = prod.count * prod.price;
                }
                 return prod
             }))

@@ -3,7 +3,7 @@ import gatoDeLaSuerte from "./assets/gatoDeLaSuerte.png";
 import CarritoNavBar from "../CartWidget/carritoNav";
 
 import { Link } from "react-router-dom";
-import Dropdown from "../Dropdown/Dropdown";
+
 
 const NavBar = () => {
   return (
@@ -18,15 +18,17 @@ const NavBar = () => {
           </Link>
         </div>
         <ul className="navHead">
-          <Dropdown />
           <Link to="/" className="navHeadNew">
             <li>new</li>
           </Link>
-          <Link to="/category/5" className="navHeadRemeras">
-            <li>informacion</li>
+          <Link to='/category/1' className="navHeadRemeras">
+            <li>hoodies</li>
           </Link>
-          <Link to="/category/6" className="navHeadPantalones">
-            <li>contacto</li>
+          <Link to='/category/3' className="navHeadPantalones">
+            <li>jeans</li>
+          </Link>
+          <Link to='/category/2' className="navHeadPantalones">
+            <li>remeras</li>
           </Link>
           <Link to="/cart">
             <CarritoNavBar />

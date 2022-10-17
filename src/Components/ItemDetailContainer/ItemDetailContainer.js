@@ -12,7 +12,7 @@ const ItemDetailConteiner = () =>{
     const [datos, setDatos] = useState({});
     const { id } = useParams();
     useEffect(() => {
-        const q = doc(db, 'products', id);
+        const q = doc(db, 'productos', id);
         getDoc(q)
             .then(res => setDatos({
                 id: res.id,

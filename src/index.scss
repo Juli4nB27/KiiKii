@@ -9,11 +9,9 @@
 //Import itemDetailConteiner
 @import './Components/ItemDetailContainer/ItemDetailContainer';
 
-
-
 @import './styles/resets';
 
-
+//Cart widget
 @import './Components/CartWidget/carritoNav';
 
 
@@ -38,4 +36,8 @@
 @import './Components/Footer/Footer';
 
 //_Cart 
-@import './views/Cart';
+@import './views/Cart/Cart';
+
+@import './views/Checkout/Checkout';
+
+@import './views/Checkout/Form';

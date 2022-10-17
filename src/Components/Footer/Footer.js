@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="tituloFooter">
         <h4 className="nameFooter">
           KIIKII
-          <h5 className="h5eslogan">
+          <p className="h5eslogan">
             La mejor ropa con los mejores diseñadores.
-          </h5>
+          </p>
         </h4>
         <div className="social">
-          <h4 className="h4Redes">SOCIAL</h4>
+          <h5 className="h4Redes">SOCIAL</h5>
           <a className="instagramFooter"> <img src={logoInstagram}></img> </a>
           <a className="facebookFooter"> <img src={logoFacebook}></img> </a>
         </div>
