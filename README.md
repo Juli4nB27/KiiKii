@@ -15,7 +15,7 @@ Desarrollo realizado enteramente con React
 
 Deberemos abrir nuestra consola bash o cmd y clonar el repositorio de forma local con el siguiente comando.
 ```
-git clone https://github.com/Juli4nB27/KiiKii.git
+git clone https://github.com/Juli4nB27/KiiKii
 ```
 ### ✔Instalacion de dependencias
 
