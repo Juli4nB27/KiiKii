@@ -42,11 +42,9 @@ const Checkout = () => {
             price: item.price,
           })),    
         };
-        console.log(orden);
       const ordenDeCompra = collection(db, "ordenes");
       addDoc(ordenDeCompra, orden).then(({ id }) => setpurchaseID(id));
       resetForm();
-      console.log(ordenDeCompra);
     };
     useEffect(() => {
       sumTotal();
