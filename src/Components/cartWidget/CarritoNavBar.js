@@ -15,7 +15,7 @@ function CarritoNavBar() {
     return (
       <div className="App">
         <div className='itemsInCart' >
-          <img className='carrito' src={carritoCompra} />
+          <img className='carrito' alt='img' src={carritoCompra} />
           {itemsInCart}
         </div>
         
