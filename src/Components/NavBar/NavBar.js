@@ -1,6 +1,6 @@
 import gatoDeLaSuerte from "./assets/gatoDeLaSuerte.png";
 
-import CarritoNavBar from "../CartWidget/carritoNav";
+import CarritoNavBar from "../CartWidget/CarritoNavBar";
 
 import { Link } from "react-router-dom";
 

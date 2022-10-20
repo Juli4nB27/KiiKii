@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
-
+import React from "react";
 
 const ItemDetail = ({item}) => {
 
@@ -20,35 +20,30 @@ const ItemDetail = ({item}) => {
     let [add, setAdd] = useState(0)
     const onAdd = () => {
         add = add + count
-        add === 1 ? console.log(`Se agrego ${add} objeto al carrito`) : console.log(`Se agregaron ${add} objetos al carrito`)
         setAdd(add)
         addItem(item, count)
     }
     const { addItem } = useContext(CartContext)
     return(
         <div  className="contenedorCardDetail">
-            <img src={item.image} className="imagenCardDetail"/>
+            <img src={item.image} className="imagenCardDetail" alt="ima"/>
             <h2 className="tituloCardDetail">{item.title}</h2>
             <p className="precioCardDetail">${item.precio}</p>
             <p className="precioDescDetail">{item.desc}</p>
-            <div className="divContBtns">
+            <div className="divContBtns">  
             {
                 add > 0 ?
                     <Link to="/cart" className="divFinalizarCompra">
                         <div className="msjOnAdd">
                             Producto añadido!
-                        <Link to="/" ><button className="btnSeguirComprando">Seguir Comprando</button></Link>
+                            <Link to="/" ><button className="btnSeguirComprando">Seguir Comprando</button></Link>
                         </div>
                         <button className="btnFinalizarCompra">Ir al carrito</button>
                     </Link>
-                    : 
-                    
+                :    
                 <ItemCount onAdd={onAdd} RestarContador={RestarContador} SumarContador={SumarContador} count={count} item={item} inicio={0} stock={item.stock} addItem={addItem} />     
-                
-            }
-                
+            } 
             </div>
-            
         </div>
     );
 }
